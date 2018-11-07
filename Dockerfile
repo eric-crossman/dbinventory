@@ -4,4 +4,4 @@ WORKDIR /usr/src/app
 EXPOSE 4000
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
-CMD python /usr/src/app/index.py
+CMD /usr/local/bin/python /usr/src/app/index.py
