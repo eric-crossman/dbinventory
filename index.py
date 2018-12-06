@@ -43,5 +43,4 @@ def static_proxy(path):
 if __name__ == '__main__':
     LOG.info('running environment: %s', os.environ.get('ENV'))
     app.config['DEBUG'] = os.environ.get('ENV') == 'development' # Debug mode if development env
-    app.run(host='0.0.0.0', port=int(PORT)) # Run the app
-    
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT'))) # Run the app
